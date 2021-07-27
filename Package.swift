@@ -14,7 +14,6 @@ let package = Package (
     targets: [
         .target(
             name: "HJVisualComponents",
-            path: "HJVisualComponents",
-            publicHeadersPath: "HJVisualComponents")
+            path: "HJVisualComponents"
     ]
 )
