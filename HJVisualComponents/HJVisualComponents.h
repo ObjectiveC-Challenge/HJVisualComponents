@@ -15,4 +15,5 @@ FOUNDATION_EXPORT const unsigned char HJVisualComponentsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <HJVisualComponents/PublicHeader.h>
 
-#import <HJVisualComponents/RadioButton.h>
+//#import <HJVisualComponents/RadioButton.h>
+#import "RadioButton.h"
