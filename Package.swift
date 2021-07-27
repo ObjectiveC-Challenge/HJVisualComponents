@@ -1,10 +1,11 @@
 // swift-tools-version:5.0
+
 import PackageDescription
 
 let package = Package (
     name: "HJVisualComponents",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v14_5)
     ],
     products: [
         .library(
@@ -12,9 +13,6 @@ let package = Package (
             targets: ["HJVisualComponents"]),
     ],
     targets: [
-        .target(
-            name: "HJVisualComponents",
-            path: "HJVisualComponents",
-            publicHeadersPath: "")
+        .target( name: "HJVisualComponents")
     ]
 )
