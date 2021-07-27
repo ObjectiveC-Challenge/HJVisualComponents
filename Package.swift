@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package (
     name: "HJVisualComponents",
     platforms: [
-        .iOS(.v14_5)
+        .iOS(.v14) 
     ],
     products: [
         .library(
