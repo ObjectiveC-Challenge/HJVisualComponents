@@ -62,6 +62,8 @@ NSLayoutConstraint.activate([
 ])
 ```
 
+You can see better an example of use with Swift here: https://github.com/ObjectiveC-Challenge/SampleSwift
+
 ---
 
 # Documentation
