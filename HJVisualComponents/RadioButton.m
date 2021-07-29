@@ -9,6 +9,17 @@
 
 @implementation RadioButton: UIView
 
+/**
+ - Configure the radio buttons with custom design.
+ 
+ - Parameters:
+    - multiplierP: CGFloat
+    - selectedColorP: UIColor *
+    - unselectedColorP: UIColor *
+    - fontColorP: UIColor *
+
+ - Returns: RadioButton
+ */
 - (instancetype)initWithMultiplier:(CGFloat)multiplierP selectedColor:(UIColor *)selectedColorP unselectedColor:(UIColor *)unselectedColorP fontColor:(UIColor *)fontColorP {
     if ((self = [super init])) {
         multiplier = multiplierP;
@@ -60,10 +71,22 @@
     sender.tintColor = selectedColor;
 }
 
+/**
+ Return the selected option. If there aren't select options, this function returns nil.
+ 
+ - Returns: NSString?
+ */
 -(NSString*)getSelectedLabel {
     return selectedButton < 0 ? nil : names[selectedButton];
 }
 
+/**
+ Configure the quantity and values of radio button's options. The options must be a String Array.
+
+ - Parameter namesP: NSArray of String.
+
+ - Returns: Void
+ */
 - (void)setOptions:(NSArray *)namesP {
     names = namesP;
 }

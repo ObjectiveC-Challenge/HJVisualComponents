@@ -6,7 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/**
+ Radio button class
+ */
 @interface RadioButton: UIView{
     CGFloat multiplier;
     UIColor *selectedColor, *unselectedColor, *fontColor;
