@@ -92,15 +92,15 @@ RadioButton()
 ```
 
 #### setOptions
-Use this function to configure the quantity and values of radio button's options. The options must be a String Array.
+Use this function to configure the quantity and values of radio button's options. The options must be a type that can be converted to NSString.
 
 ```swift
 radioButton.setOptions(["A", "B", "C"])
 ```
 
-#### getSelectedLabel
+#### getSelectedValue
 Use this function to return the selected option. If there aren't select options, this function returns nil.
 
 ```swift
-radioButton.getSelectedLabel()
+radioButton.getSelectedValue()
 ```
