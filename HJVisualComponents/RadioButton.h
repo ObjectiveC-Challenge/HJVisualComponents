@@ -16,7 +16,10 @@ IB_DESIGNABLE
 }
 @property (readonly) NSArray *buttons;
 @property (readonly) long selectedButton;
+
+/*! @brief okzao selectcolor*/
 @property (nonatomic) IBInspectable UIColor *selectedColor;
+
 @property (nonatomic) IBInspectable UIColor *fontColor;
 @property (nonatomic) IBInspectable UIColor *unselectedColor;
 @property (nonatomic) IBInspectable CGFloat multiplier;
@@ -35,8 +38,8 @@ IB_DESIGNABLE
 -(void)setOptions:(NSArray*)namesP;
 
 
-/// @brief Return the selected option. If there aren't select options, this function returns nil.
-/// @returns Return the type that was set in the funcion setOptions() or nil.
+
+/*! @brief okzao getselct*/
 -(id)getSelectedValue;
 @end
 
