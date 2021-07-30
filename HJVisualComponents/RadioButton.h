@@ -6,9 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-/**
- Radio button class
- */
+IB_DESIGNABLE
 @interface RadioButton: UIView{
     CGFloat multiplier;
     UIColor *selectedColor, *unselectedColor, *fontColor;
@@ -18,9 +16,13 @@
 }
 @property (readonly) NSArray *buttons;
 @property (readonly) long selectedButton;
+@property (nonatomic) IBInspectable UIColor *selectedColor;
+@property (nonatomic) IBInspectable UIColor *fontColor;
+@property (nonatomic) IBInspectable UIColor *unselectedColor;
+@property (nonatomic) IBInspectable CGFloat multiplier;
 
 -(instancetype)initWithMultiplier:(CGFloat)multiplierP selectedColor:(UIColor*)selectedColorP unselectedColor:(UIColor*)unselectedColorP fontColor:(UIColor*)fontColorP;
 -(void)setOptions:(NSArray*)namesP;
--(NSString*)getSelectedLabel;
+-(id)getSelectedValue;
 @end
 

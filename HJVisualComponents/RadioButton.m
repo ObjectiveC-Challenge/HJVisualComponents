@@ -9,24 +9,20 @@
 
 @implementation RadioButton: UIView
 
-/**
- - Configure the radio buttons with custom design.
- 
- - Parameters:
-    - multiplierP: CGFloat
-    - selectedColorP: UIColor *
-    - unselectedColorP: UIColor *
-    - fontColorP: UIColor *
-
- - Returns: RadioButton
- */
-- (instancetype)initWithMultiplier:(CGFloat)multiplierP selectedColor:(UIColor *)selectedColorP unselectedColor:(UIColor *)unselectedColorP fontColor:(UIColor *)fontColorP {
+/// @brief  Configure the radio buttons with custom design.
+/// @param multiplierP CGFloat that represents button size relative to parent view.
+/// @param selectedColorP UIColor * that represents button color when selected.
+/// @param unselectedColorP UIColor * that represents button color when not selected
+/// @param fontColorP UIColor * that represents color of the label below the button
+/// @returns RadioButton
+- (id)initWithMultiplier:(CGFloat)multiplierP selectedColor:(UIColor *)selectedColorP unselectedColor:(UIColor *)unselectedColorP fontColor:(UIColor *)fontColorP {
     if ((self = [super init])) {
         multiplier = multiplierP;
         selectedColor = selectedColorP;
         unselectedColor = unselectedColorP;
         fontColor = fontColorP;
     }
+    
     return self;
 }
 
@@ -71,22 +67,17 @@
     sender.tintColor = selectedColor;
 }
 
-/**
- Return the selected option. If there aren't select options, this function returns nil.
- 
- - Returns: NSString?
- */
--(NSString*)getSelectedLabel {
+
+
+/// @brief Return the selected option. If there aren't select options, this function returns nil.
+/// @returns Return the type that was set in the funcion setOptions() or nil.
+-(id)getSelectedValue {
     return selectedButton < 0 ? nil : names[selectedButton];
 }
 
-/**
- Configure the quantity and values of radio button's options. The options must be a String Array.
-
- - Parameter namesP: NSArray of String.
-
- - Returns: Void
- */
+/// @brief Configure the quantity and values of radio button's options. The options must be a String Array.
+/// @discussion Note that the namesP variable must be a type that can be converted to NSString.
+/// @param namesP NSArray .
 - (void)setOptions:(NSArray *)namesP {
     names = namesP;
 }
@@ -123,9 +114,12 @@
     return newButton;
 }
 
--(UILabel*) setUpLabel: (NSString*)name {
+-(UILabel*) setUpLabel: (id)name {
     UILabel *newLabel = [[UILabel alloc] init];
-    newLabel.text = name;
+    NSMutableString * result = [[NSMutableString alloc] init];
+    [result appendString:[name description]];
+    
+    newLabel.text = result;
     newLabel.textColor = fontColor;
     newLabel.textAlignment = NSTextAlignmentLeft;
     return newLabel;
