@@ -16,9 +16,17 @@ IB_DESIGNABLE
 }
 @property (readonly) NSArray *buttons;
 @property (readonly) long selectedButton;
+
+/// @brief Button's color when it is selected
 @property (nonatomic) IBInspectable UIColor *selectedColor;
+
+/// @brief Labels's color
 @property (nonatomic) IBInspectable UIColor *fontColor;
+
+/// @brief Button's color when it is not selected
 @property (nonatomic) IBInspectable UIColor *unselectedColor;
+
+/// @brief Button's size relative to parent view.
 @property (nonatomic) IBInspectable CGFloat multiplier;
 
 /// @brief Configure the radio buttons with custom design.
