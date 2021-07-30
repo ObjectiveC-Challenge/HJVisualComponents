@@ -44,7 +44,7 @@ import HJVisualComponents
 
 ```swift
 let radioButtonDefault = RadioButton() // Default init
-let radioButtonCustom = RadioButton(multiplier: 0.5, selectedColor: .black, unselectedColor: .gray, fontColor: .black) // Custom init
+let radioButtonCustom = RadioButton(multiplier: 0.5, selectedColor: .black, unselectedColor: .gray, fontColor: .black, orientation: .horizontal)) // Custom init
 ```
 
 3. Setup options
@@ -75,9 +75,9 @@ Custom init allows you to set the following parameters:
 - selectedColor: Button color when selected
 - unselectedColor: Button color when not selected
 - fontColor: Color of the label below the button
-
+- orientation: that represents the button's orientation. Can ben horizontal or vertical.
 ```swift
-RadioButton(multiplier: 0.5, selectedColor: .blue, unselectedColor: .red, fontColor: .gray)
+RadioButton(multiplier: 0.5, selectedColor: .blue, unselectedColor: .red, fontColor: .gray, orientation: .horizontal))
 ```
 
 #### Default init
@@ -86,7 +86,7 @@ Default init have default values to:
 - selectedColor: UIColor.black
 - unselectedColor: UIColor.gray
 - fontColor: UIColor.black
-
+- orientation: .horizontal
 ```swift
 RadioButton()
 ```
